@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Kullanıcı Kaydı</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body class="auth-page"> 
+
+    <div class="card"> 
+        
+        <h2>Kayıt Ol</h2>
+        <hr>
+        
+        <form action="/register" method="POST">
+            
+            <div class="input-group">
+                <label for="kullanici_adi">Kullanıcı Adı</label>
+                <input 
+                    type="text" 
+                    id="kullanici_adi" 
+                    name="kullanici_adi" 
+                    placeholder="Bir kullanıcı adı girin" 
+                    required
+                >
+            </div>
+            
+            <div class="input-group">
+                <label for="sifre">Şifre</label>
+                <input 
+                    type="password" 
+                    id="sifre" 
+                    name="sifre" 
+                    placeholder="Şifrenizi girin" 
+                    required
+                >
+            </div>
+
+            <div class="input-group">
+                <label for="telefon">Telefon Numarası</label>
+                <input 
+                    type="tel" 
+                    id="telefon" 
+                    name="telefon" 
+                    placeholder="Örn: 5xx xxx xx xx" 
+                    required
+                >
+            </div>
+            
+            <div class="input-group">
+                <label for="adres">Adres Bilgileri</label>
+                <textarea 
+                    id="adres" 
+                    name="adres" 
+                    rows="3" 
+                    placeholder="Adresinizi detaylıca girin" 
+                    required
+                ></textarea>
+            </div>
+            
+            <div class="button-group" style="margin-top: 30px;">
+                
+                <button type="submit" class="btn primary" style="width: 48%;">Hesap Oluştur</button>
+                
+                <a href="giris.html" class="btn secondary" style="width: 48%; text-align: center; display: block; line-height: 30px;">Girişe Dön</a>
+                
+            </div>
+            
+        </form>
+    </div>
+
+</body>
+</html>

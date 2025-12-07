@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Yönetim Paneli - Macera Adası</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo-area">
+            <h1>Yönetim Paneli 🏝️</h1>
+        </div>
+
+        <div class="menu-icon" onclick="toggleMenu()">
+            <span>☰</span> 
+        </div>
+    </header>
+
+    <main class="panel-content">
+        
+        <div class="content-section add-student-area">
+            <div class="student-list">
+                <h4>Yeni Öğrenci Ekle</h4>
+                <div class="student-avatars">
+                    <div class="avatar-container add-new-avatar" onclick="window.location.href='ekle.html'">
+                        <div class="avatar plus">+</div> 
+                        <span class="student-name">Öğrenci Kaydı</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main> 
+    
+    <nav id="settings-menu" class="side-menu right-menu">
+        
+        <div class="menu-header">
+            <h3>Hesap Ayarları</h3>
+            <span class="close-btn" onclick="toggleMenu()">×</span>
+        </div>
+        
+        <div class="accordion-container">
+            
+            <div class="accordion-item">
+                <h4 class="accordion-header" onclick="toggleAccordion('pass-form')">🔒 Şifre Değiştir (Tıkla)</h4>
+                <div id="pass-form" class="accordion-content">
+                    <form>
+                        <input type="password" placeholder="Mevcut Şifre" required>
+                        <input type="password" placeholder="Yeni Şifre" required>
+                        <input type="password" placeholder="Yeni Şifre Tekrarı" required>
+                        <button type="submit" class="btn primary small-btn">Kaydet</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h4 class="accordion-header" onclick="toggleAccordion('user-form')">👤 Kullanıcı Adı Değiştir (Tıkla)</h4>
+                <div id="user-form" class="accordion-content">
+                    <input type="text" placeholder="Yeni Kullanıcı Adı" required>
+                    <button type="submit" class="btn primary small-btn">Kaydet</button>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <h4 class="accordion-header" onclick="toggleAccordion('phone-form')">📞 Telefon No Değiştir (Tıkla)</h4>
+                <div id="phone-form" class="accordion-content">
+                    <input type="tel" placeholder="Yeni Telefon Numarası" required>
+                    <button type="submit" class="btn primary small-btn">Kaydet</button>
+                </div>
+            </div>
+            
+            <div class="accordion-item">
+                <h4 class="accordion-header" onclick="toggleAccordion('address-form')">📍 Adres Değiştir (Tıkla)</h4>
+                <div id="address-form" class="accordion-content">
+                    <textarea rows="3" placeholder="Yeni Adres Bilgileri" required></textarea>
+                    <button type="submit" class="btn primary small-btn">Kaydet</button>
+                </div>
+            </div>
+            
+            <div class="logout-item" style="padding: 15px 0; border-top: 1px solid #ddd;">
+                <a href="giris.html" style="color: #9e0a9e; font-weight: bold; text-decoration: none;">🚪 Oturumu Kapat</a>
+            </div>
+            
+        </div>
+    </nav>
+    
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('settings-menu');
+            menu.classList.toggle('active'); 
+        }
+
+        function toggleAccordion(contentId) {
+            const content = document.getElementById(contentId);
+            
+            content.classList.toggle('open');
+            
+            const allContents = document.querySelectorAll('.accordion-content');
+            allContents.forEach(item => {
+                if (item.id !== contentId && item.classList.contains('open')) {
+                    item.classList.remove('open');
+                }
+            });
+        }
+    </script>
+    
+</body> </html> ```
