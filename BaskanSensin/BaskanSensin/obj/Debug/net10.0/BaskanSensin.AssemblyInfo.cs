@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BaskanSensin")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+623f98c768f037401ad27d2c59e038c5393c8686")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc3efc7791f90f070b2fe3e28578772a4d96c50d")]
 [assembly: System.Reflection.AssemblyProductAttribute("BaskanSensin")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BaskanSensin")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

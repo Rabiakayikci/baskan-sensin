@@ -1,12 +1,54 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\rabia\\Documents\\GitHub\\baskan-sensin\\BaskanSensin\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E1C311-5CC4-476E-CB41-B82556517565}|BaskanSensin\\BaskanSensin.csproj|c:\\users\\rabia\\documents\\github\\baskan-sensin\\baskansensin\\baskansensin\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2E1C311-5CC4-476E-CB41-B82556517565}|BaskanSensin\\BaskanSensin.csproj|solutionrelative:baskansensin\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E1C311-5CC4-476E-CB41-B82556517565}|BaskanSensin\\BaskanSensin.csproj|c:\\users\\rabia\\documents\\github\\baskan-sensin\\baskansensin\\baskansensin\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2E1C311-5CC4-476E-CB41-B82556517565}|BaskanSensin\\BaskanSensin.csproj|solutionrelative:baskansensin\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\rabia\\Documents\\GitHub\\baskan-sensin\\BaskanSensin\\BaskanSensin\\Models\\User.cs",
+              "RelativeDocumentMoniker": "BaskanSensin\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\rabia\\Documents\\GitHub\\baskan-sensin\\BaskanSensin\\BaskanSensin\\Models\\User.cs",
+              "RelativeToolTip": "BaskanSensin\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T16:18:31.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\rabia\\Documents\\GitHub\\baskan-sensin\\BaskanSensin\\BaskanSensin\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "BaskanSensin\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\rabia\\Documents\\GitHub\\baskan-sensin\\BaskanSensin\\BaskanSensin\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "BaskanSensin\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAQwEIAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-07T15:34:26.037Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
