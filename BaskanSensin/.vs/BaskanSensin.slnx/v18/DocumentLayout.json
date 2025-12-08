@@ -3,36 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\rabia\\Documents\\GitHub\\baskan-sensin\\BaskanSensin\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B2E1C311-5CC4-476E-CB41-B82556517565}|BaskanSensin\\BaskanSensin.csproj|c:\\users\\rabia\\documents\\github\\baskan-sensin\\baskansensin\\baskansensin\\services\\hesapyonetimservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2E1C311-5CC4-476E-CB41-B82556517565}|BaskanSensin\\BaskanSensin.csproj|solutionrelative:baskansensin\\services\\hesapyonetimservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2E1C311-5CC4-476E-CB41-B82556517565}|BaskanSensin\\BaskanSensin.csproj|c:\\users\\rabia\\documents\\github\\baskan-sensin\\baskansensin\\baskansensin\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{B2E1C311-5CC4-476E-CB41-B82556517565}|BaskanSensin\\BaskanSensin.csproj|solutionrelative:baskansensin\\wwwroot\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2E1C311-5CC4-476E-CB41-B82556517565}|BaskanSensin\\BaskanSensin.csproj|c:\\users\\rabia\\documents\\github\\baskan-sensin\\baskansensin\\baskansensin\\controllers\\hesapyonetimcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2E1C311-5CC4-476E-CB41-B82556517565}|BaskanSensin\\BaskanSensin.csproj|solutionrelative:baskansensin\\controllers\\hesapyonetimcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2E1C311-5CC4-476E-CB41-B82556517565}|BaskanSensin\\BaskanSensin.csproj|c:\\users\\rabia\\documents\\github\\baskan-sensin\\baskansensin\\baskansensin\\controllers\\oyuncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B2E1C311-5CC4-476E-CB41-B82556517565}|BaskanSensin\\BaskanSensin.csproj|solutionrelative:baskansensin\\controllers\\oyuncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B2E1C311-5CC4-476E-CB41-B82556517565}|BaskanSensin\\BaskanSensin.csproj|c:\\users\\rabia\\documents\\github\\baskan-sensin\\baskansensin\\baskansensin\\views\\oyun\\oyna.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B2E1C311-5CC4-476E-CB41-B82556517565}|BaskanSensin\\BaskanSensin.csproj|solutionrelative:baskansensin\\views\\oyun\\oyna.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B2E1C311-5CC4-476E-CB41-B82556517565}|BaskanSensin\\BaskanSensin.csproj|c:\\users\\rabia\\documents\\github\\baskan-sensin\\baskansensin\\baskansensin\\views\\oyun\\harita.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{B2E1C311-5CC4-476E-CB41-B82556517565}|BaskanSensin\\BaskanSensin.csproj|solutionrelative:baskansensin\\views\\oyun\\harita.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B2E1C311-5CC4-476E-CB41-B82556517565}|BaskanSensin\\BaskanSensin.csproj|c:\\users\\rabia\\documents\\github\\baskan-sensin\\baskansensin\\baskansensin\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B2E1C311-5CC4-476E-CB41-B82556517565}|BaskanSensin\\BaskanSensin.csproj|solutionrelative:baskansensin\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{B2E1C311-5CC4-476E-CB41-B82556517565}|BaskanSensin\\BaskanSensin.csproj|c:\\users\\rabia\\documents\\github\\baskan-sensin\\baskansensin\\baskansensin\\services\\hesapyonetimservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2E1C311-5CC4-476E-CB41-B82556517565}|BaskanSensin\\BaskanSensin.csproj|solutionrelative:baskansensin\\services\\hesapyonetimservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E1C311-5CC4-476E-CB41-B82556517565}|BaskanSensin\\BaskanSensin.csproj|c:\\users\\rabia\\documents\\github\\baskan-sensin\\baskansensin\\baskansensin\\views\\hesapyonetim\\velianasayfa.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B2E1C311-5CC4-476E-CB41-B82556517565}|BaskanSensin\\BaskanSensin.csproj|solutionrelative:baskansensin\\views\\hesapyonetim\\velianasayfa.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E1C311-5CC4-476E-CB41-B82556517565}|BaskanSensin\\BaskanSensin.csproj|c:\\users\\rabia\\documents\\github\\baskan-sensin\\baskansensin\\baskansensin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B2E1C311-5CC4-476E-CB41-B82556517565}|BaskanSensin\\BaskanSensin.csproj|solutionrelative:baskansensin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E1C311-5CC4-476E-CB41-B82556517565}|BaskanSensin\\BaskanSensin.csproj|c:\\users\\rabia\\documents\\github\\baskan-sensin\\baskansensin\\baskansensin\\models\\skor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2E1C311-5CC4-476E-CB41-B82556517565}|BaskanSensin\\BaskanSensin.csproj|solutionrelative:baskansensin\\models\\skor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E1C311-5CC4-476E-CB41-B82556517565}|BaskanSensin\\BaskanSensin.csproj|c:\\users\\rabia\\documents\\github\\baskan-sensin\\baskansensin\\baskansensin\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2E1C311-5CC4-476E-CB41-B82556517565}|BaskanSensin\\BaskanSensin.csproj|solutionrelative:baskansensin\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B2E1C311-5CC4-476E-CB41-B82556517565}|BaskanSensin\\BaskanSensin.csproj|c:\\users\\rabia\\documents\\github\\baskan-sensin\\baskansensin\\baskansensin\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B2E1C311-5CC4-476E-CB41-B82556517565}|BaskanSensin\\BaskanSensin.csproj|solutionrelative:baskansensin\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2E1C311-5CC4-476E-CB41-B82556517565}|BaskanSensin\\BaskanSensin.csproj|c:\\users\\rabia\\documents\\github\\baskan-sensin\\baskansensin\\baskansensin\\controllers\\hesapyonetimcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2E1C311-5CC4-476E-CB41-B82556517565}|BaskanSensin\\BaskanSensin.csproj|solutionrelative:baskansensin\\controllers\\hesapyonetimcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B2E1C311-5CC4-476E-CB41-B82556517565}|BaskanSensin\\BaskanSensin.csproj|c:\\users\\rabia\\documents\\github\\baskan-sensin\\baskansensin\\baskansensin\\services\\ihesapyonetimservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,19 +46,85 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Harita.cshtml",
               "DocumentMoniker": "C:\\Users\\rabia\\Documents\\GitHub\\baskan-sensin\\BaskanSensin\\BaskanSensin\\Views\\Oyun\\Harita.cshtml",
               "RelativeDocumentMoniker": "BaskanSensin\\Views\\Oyun\\Harita.cshtml",
               "ToolTip": "C:\\Users\\rabia\\Documents\\GitHub\\baskan-sensin\\BaskanSensin\\BaskanSensin\\Views\\Oyun\\Harita.cshtml",
               "RelativeToolTip": "BaskanSensin\\Views\\Oyun\\Harita.cshtml",
-              "ViewState": "AgIAAJwAAAAAAAAAAAAiwMAAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAAALgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-08T06:23:45.377Z"
+              "WhenOpened": "2025-12-08T09:45:06.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VeliAnaSayfa.cshtml",
+              "DocumentMoniker": "C:\\Users\\rabia\\Documents\\GitHub\\baskan-sensin\\BaskanSensin\\BaskanSensin\\Views\\HesapYonetim\\VeliAnaSayfa.cshtml",
+              "RelativeDocumentMoniker": "BaskanSensin\\Views\\HesapYonetim\\VeliAnaSayfa.cshtml",
+              "ToolTip": "C:\\Users\\rabia\\Documents\\GitHub\\baskan-sensin\\BaskanSensin\\BaskanSensin\\Views\\HesapYonetim\\VeliAnaSayfa.cshtml",
+              "RelativeToolTip": "BaskanSensin\\Views\\HesapYonetim\\VeliAnaSayfa.cshtml",
+              "ViewState": "AgIAADgBAAAAAAAAAAAAAEEBAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-08T09:37:47.5Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HesapYonetimServices.cs",
+              "DocumentMoniker": "C:\\Users\\rabia\\Documents\\GitHub\\baskan-sensin\\BaskanSensin\\BaskanSensin\\Services\\HesapYonetimServices.cs",
+              "RelativeDocumentMoniker": "BaskanSensin\\Services\\HesapYonetimServices.cs",
+              "ToolTip": "C:\\Users\\rabia\\Documents\\GitHub\\baskan-sensin\\BaskanSensin\\BaskanSensin\\Services\\HesapYonetimServices.cs",
+              "RelativeToolTip": "BaskanSensin\\Services\\HesapYonetimServices.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAzwOgAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T09:36:48.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\rabia\\Documents\\GitHub\\baskan-sensin\\BaskanSensin\\BaskanSensin\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "BaskanSensin\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\rabia\\Documents\\GitHub\\baskan-sensin\\BaskanSensin\\BaskanSensin\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "BaskanSensin\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-08T09:36:08.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Skor.cs",
+              "DocumentMoniker": "C:\\Users\\rabia\\Documents\\GitHub\\baskan-sensin\\BaskanSensin\\BaskanSensin\\Models\\Skor.cs",
+              "RelativeDocumentMoniker": "BaskanSensin\\Models\\Skor.cs",
+              "ToolTip": "C:\\Users\\rabia\\Documents\\GitHub\\baskan-sensin\\BaskanSensin\\BaskanSensin\\Models\\Skor.cs",
+              "RelativeToolTip": "BaskanSensin\\Models\\Skor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T09:36:05.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\rabia\\Documents\\GitHub\\baskan-sensin\\BaskanSensin\\BaskanSensin\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "BaskanSensin\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\rabia\\Documents\\GitHub\\baskan-sensin\\BaskanSensin\\BaskanSensin\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "BaskanSensin\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-08T09:36:03.548Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -74,89 +140,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "HesapYonetimController.cs",
               "DocumentMoniker": "C:\\Users\\rabia\\Documents\\GitHub\\baskan-sensin\\BaskanSensin\\BaskanSensin\\Controllers\\HesapYonetimController.cs",
               "RelativeDocumentMoniker": "BaskanSensin\\Controllers\\HesapYonetimController.cs",
               "ToolTip": "C:\\Users\\rabia\\Documents\\GitHub\\baskan-sensin\\BaskanSensin\\BaskanSensin\\Controllers\\HesapYonetimController.cs",
               "RelativeToolTip": "BaskanSensin\\Controllers\\HesapYonetimController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwBwAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwBwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T06:14:42.041Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "OyunController.cs",
-              "DocumentMoniker": "C:\\Users\\rabia\\Documents\\GitHub\\baskan-sensin\\BaskanSensin\\BaskanSensin\\Controllers\\OyunController.cs",
-              "RelativeDocumentMoniker": "BaskanSensin\\Controllers\\OyunController.cs",
-              "ToolTip": "C:\\Users\\rabia\\Documents\\GitHub\\baskan-sensin\\BaskanSensin\\BaskanSensin\\Controllers\\OyunController.cs",
-              "RelativeToolTip": "BaskanSensin\\Controllers\\OyunController.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAcwDcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T06:10:38.651Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Oyna.cshtml",
-              "DocumentMoniker": "C:\\Users\\rabia\\Documents\\GitHub\\baskan-sensin\\BaskanSensin\\BaskanSensin\\Views\\Oyun\\Oyna.cshtml",
-              "RelativeDocumentMoniker": "BaskanSensin\\Views\\Oyun\\Oyna.cshtml",
-              "ToolTip": "C:\\Users\\rabia\\Documents\\GitHub\\baskan-sensin\\BaskanSensin\\BaskanSensin\\Views\\Oyun\\Oyna.cshtml",
-              "RelativeToolTip": "BaskanSensin\\Views\\Oyun\\Oyna.cshtml",
-              "ViewState": "AgIAAJgAAAAAAAAAAAAiwLUAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-08T06:06:17.567Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HesapYonetimServices.cs",
-              "DocumentMoniker": "C:\\Users\\rabia\\Documents\\GitHub\\baskan-sensin\\BaskanSensin\\BaskanSensin\\Services\\HesapYonetimServices.cs",
-              "RelativeDocumentMoniker": "BaskanSensin\\Services\\HesapYonetimServices.cs",
-              "ToolTip": "C:\\Users\\rabia\\Documents\\GitHub\\baskan-sensin\\BaskanSensin\\BaskanSensin\\Services\\HesapYonetimServices.cs*",
-              "RelativeToolTip": "BaskanSensin\\Services\\HesapYonetimServices.cs*",
-              "ViewState": "AgIAACwAAAAAAAAAAAAWwEAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T06:17:00.248Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "style.css",
-              "DocumentMoniker": "C:\\Users\\rabia\\Documents\\GitHub\\baskan-sensin\\BaskanSensin\\BaskanSensin\\wwwroot\\css\\style.css",
-              "RelativeDocumentMoniker": "BaskanSensin\\wwwroot\\css\\style.css",
-              "ToolTip": "C:\\Users\\rabia\\Documents\\GitHub\\baskan-sensin\\BaskanSensin\\BaskanSensin\\wwwroot\\css\\style.css",
-              "RelativeToolTip": "BaskanSensin\\wwwroot\\css\\style.css",
-              "ViewState": "AgIAAP4BAAAAAAAAAAAAABACAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-12-08T06:53:05.017Z",
+              "WhenOpened": "2025-12-08T06:14:42.041Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "_ViewStart.cshtml",
-              "DocumentMoniker": "C:\\Users\\rabia\\Documents\\GitHub\\baskan-sensin\\BaskanSensin\\BaskanSensin\\Views\\_ViewStart.cshtml",
-              "RelativeDocumentMoniker": "BaskanSensin\\Views\\_ViewStart.cshtml",
-              "ToolTip": "C:\\Users\\rabia\\Documents\\GitHub\\baskan-sensin\\BaskanSensin\\BaskanSensin\\Views\\_ViewStart.cshtml",
-              "RelativeToolTip": "BaskanSensin\\Views\\_ViewStart.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-08T06:33:26.473Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\rabia\\Documents\\GitHub\\baskan-sensin\\BaskanSensin\\BaskanSensin\\Program.cs",
               "RelativeDocumentMoniker": "BaskanSensin\\Program.cs",
               "ToolTip": "C:\\Users\\rabia\\Documents\\GitHub\\baskan-sensin\\BaskanSensin\\BaskanSensin\\Program.cs",
               "RelativeToolTip": "BaskanSensin\\Program.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAiwCoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-08T06:24:00.074Z"
+              "WhenOpened": "2025-12-08T06:24:00.074Z",
+              "EditorCaption": ""
             }
           ]
         }

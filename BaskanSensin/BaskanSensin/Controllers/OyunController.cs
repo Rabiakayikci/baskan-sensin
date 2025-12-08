@@ -14,9 +14,21 @@ namespace BaskanSensin.Controllers
 
        
         [HttpGet]
-        public IActionResult Harita(Guid cocukId)
+        public async Task<IActionResult> Harita(Guid cocukId)
         {
             ViewBag.CocukId = cocukId;
+            var skor = await _service.GetSkorByCocukIdAsync(cocukId);
+            int completedLevel = 0;
+            if (skor != null)
+            {
+                int total = skor.Analitikp + skor.Sanatp + skor.Dogap + skor.Sosyalp + skor.Sporp;
+                // Assuming 6 questions corresponds to finishing Level 1
+                if (total >= 6)
+                {
+                    completedLevel = 1;
+                }
+            }
+            ViewBag.CompletedLevel = completedLevel;
             return View();
         }
 

@@ -141,7 +141,7 @@ namespace BaskanSensin.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CocukSifreGuncelle(Guid cocukId, string eskiSifre, string yeniSifre, string yeniSifreTekrar)
+        public async Task<IActionResult> CocukSifreGuncelle(Guid cocukId, Guid? veliId, string eskiSifre, string yeniSifre, string yeniSifreTekrar)
         {
             try
             {
@@ -150,11 +150,11 @@ namespace BaskanSensin.Controllers
                 TempData["Basari"] = "Çocuğun şifresi başarıyla değiştirildi.";
             }
             catch (Exception ex) { TempData["Hata"] = ex.Message; }
-            return RedirectToAction("Rapor", new { cocukId = cocukId });
+            return RedirectToAction("Rapor", new { cocukId = cocukId, veliId = veliId });
         }
 
         [HttpPost]
-        public async Task<IActionResult> CocukKullaniciAdiGuncelle(Guid cocukId, string yeniKullaniciAdi)
+        public async Task<IActionResult> CocukKullaniciAdiGuncelle(Guid cocukId, Guid? veliId, string yeniKullaniciAdi)
         {
             try
             {
@@ -162,17 +162,33 @@ namespace BaskanSensin.Controllers
                 TempData["Basari"] = "Çocuğun kullanıcı adı güncellendi.";
             }
             catch (Exception ex) { TempData["Hata"] = ex.Message; }
-            return RedirectToAction("Rapor", new { cocukId = cocukId });
+            return RedirectToAction("Rapor", new { cocukId = cocukId, veliId = veliId });
         }
 
         [HttpGet]
         [HttpGet]
-        public async Task<IActionResult> Rapor(Guid cocukId)
+        public async Task<IActionResult> Rapor(Guid cocukId, Guid? veliId)
         {
             ViewBag.CocukId = cocukId;
+            ViewBag.VeliId = veliId;
             ViewBag.CocukAd = "Öğrenci";
 
             
+            var skorData = await _service.GetSkorByCocukIdAsync(cocukId);
+            bool reportExists = false;
+            if (skorData != null)
+            {
+                int total = skorData.Analitikp + skorData.Sanatp + skorData.Dogap + skorData.Sosyalp + skorData.Sporp;
+                if (total > 0) reportExists = true;
+            }
+
+            if (!reportExists)
+            {
+                ViewBag.ReportExists = false;
+                return View();
+            }
+            ViewBag.ReportExists = true;
+
             var skorlar = await _service.GetCocukSkorlariAsync(cocukId);
 
            

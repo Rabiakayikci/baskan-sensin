@@ -1,10 +1,15 @@
 wwwroot\css\site.css
 wwwroot\css\style.css
 wwwroot\favicon.ico
+wwwroot\images\adalet.jpeg
 wwwroot\images\arka.jpg
+wwwroot\images\gym.jpeg
+wwwroot\images\hastane.jpeg
 wwwroot\images\jojo.png
 wwwroot\images\logo.png
+wwwroot\images\muhendis.jpeg
 wwwroot\images\pixelart.jpg
+wwwroot\images\sanat.jpeg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
@@ -66,11 +71,6 @@ wwwroot\lib\jquery\dist\jquery.slim.js
 wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
-wwwroot\images\adalet.jpeg
-wwwroot\images\gym.jpeg
-wwwroot\images\hastane.jpeg
-wwwroot\images\muhendis.jpeg
-wwwroot\images\sanat.jpeg
 C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\wwwroot\css\site.css
 C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\wwwroot\css\style.css
 C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\wwwroot\favicon.ico

@@ -309,7 +309,7 @@
                 </form>
             </div>
         </div>
-        <a href="@Url.Action("Index", "Home")" class="logout-link"><span>🚪</span> Oturumu Kapat</a>
+        <a href="@Url.Action("Index", "Home")" class="logout-link"><span>🚪</span> Çıkış Yap</a>
     </div>
 
     <main class="panel-content">
@@ -320,7 +320,7 @@
             {
                 foreach (var cocuk in Model)
                 {
-                    <div class="card-box" onclick="location.href='@Url.Action("Rapor", "HesapYonetim", new { cocukId = cocuk.UserId })'">
+                    <div class="card-box" onclick="location.href='@Url.Action("Rapor", "HesapYonetim", new { cocukId = cocuk.UserId, veliId = veliId })'">
                         <div class="child-avatar">
                             @(cocuk.AdSoyad.Length > 0 ? cocuk.AdSoyad.Substring(0, 1).ToUpper() : "?")
                         </div>

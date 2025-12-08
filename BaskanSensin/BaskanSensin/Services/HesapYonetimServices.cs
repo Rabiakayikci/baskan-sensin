@@ -222,17 +222,15 @@ namespace BaskanSensin.Services
 
 
 
-        // HesapYonetimServices.cs dosyasında
+        
         public async Task<Dictionary<string, int>> GetCocukSkorlariAsync(Guid cocukId)
         {
-            // 1. Veritabanından çocuğun skor kaydını asenkron olarak bul.
-            // 'CocukSkorlari' sizin EF modelinizin adı olmalıdır.
+            
             var skorlar = await _db.Skorlar
-                                   .AsNoTracking() // Sadece okuma yaptığımız için takibi kapatabiliriz.
+                                   .AsNoTracking() 
                                    .FirstOrDefaultAsync(s => s.Cocukid == cocukId);
 
-            // 2. Eğer veritabanında skor kaydı bulunamazsa (henüz hiç cevap vermemişse),
-            // tüm puanları 0 olan bir sözlük döndür.
+           
             if (skorlar == null)
             {
                 return new Dictionary<string, int>

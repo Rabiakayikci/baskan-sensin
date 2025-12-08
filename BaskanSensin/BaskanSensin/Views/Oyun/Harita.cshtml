@@ -26,7 +26,7 @@
     </div>
 
     <div id="game-container">
-        <!-- Script to handle URL parameters for level completion -->
+        <
         <script>
             document.addEventListener('DOMContentLoaded', () => {
                 const urlParams = new URLSearchParams(window.location.search);
@@ -34,10 +34,10 @@
                 
                 if (levelCompleted === '1') {
                     localStorage.setItem('completedLevel', 1);
-                    // Remove the query param from URL to prevent re-triggering on refresh
+                    
                     window.history.replaceState({}, document.title, window.location.pathname + "?cocukId=" + '@cocukId');
                     
-                    // Show success message immediately
+                    
                     const successBubble = document.getElementById('complete-bubble');
                     if(successBubble) successBubble.classList.remove('hidden');
                 }
@@ -121,7 +121,19 @@
         }
 
         function checkLevelStatus() {
-            const completedLevel = parseInt(loadGame('completedLevel') || 0);
+            
+            const serverCompletedLevel = @(ViewBag.CompletedLevel ?? 0);
+            
+            
+            if (serverCompletedLevel > 0) {
+                 localStorage.setItem('completedLevel', serverCompletedLevel);
+            } else {
+                 
+                 localStorage.removeItem('completedLevel');
+            }
+
+            const completedLevel = serverCompletedLevel;
+            
             for (let i = 1; i <= 5; i++) {
                 const levelElement = document.getElementById(`level${i}`);
                 if (!levelElement) continue;
@@ -170,7 +182,7 @@
             if (!introOverlay.classList.contains('hidden')) return;
             hideAllBubbles();
 
-            // Check if level 1 is completed
+         
             const completedLevel = parseInt(loadGame('completedLevel') || 0);
 
             if (level === 1) {

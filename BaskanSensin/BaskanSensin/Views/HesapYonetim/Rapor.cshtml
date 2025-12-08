@@ -209,17 +209,35 @@
     <div class="overlay" onclick="closeMenu()"></div>
 
     <header class="report-header">
-        <div class="report-header-title">Raporlar 📊</div>
+        <div class="report-header-title">
+            @if (ViewBag.VeliId != null)
+            {
+                <a href="@Url.Action("VeliAnasayfa", "HesapYonetim", new { id = ViewBag.VeliId })" style="text-decoration:none; color:white; margin-right:15px; font-size:1.5rem;">
+                    🔙
+                </a>
+            }
+            Raporlar 📊
+        </div>
         <div class="settings-icon" onclick="openMenu()">⚙️</div> 
     </header>
 
     <div class="container">
-        <div class="report-card">
-            <h2 class="card-title">Genel Performans Özeti</h2>
-            <div class="report-text">
-                @Html.Raw(raporText)
+        @if (ViewBag.ReportExists == true) {
+            <div class="report-card">
+                <h2 class="card-title">Genel Performans Özeti</h2>
+                <div class="report-text">
+                    @Html.Raw(raporText)
+                </div>
             </div>
-        </div>
+        } else {
+             <div class="report-card" style="text-align:center;">
+                <h2 class="card-title">Henüz Rapor Yok 📉</h2>
+                <div class="report-text">
+                    <p>Öğrenci henüz oyunu oynamadığı veya tamamlamadığı için bir gelişim raporu oluşturulamadı.</p>
+                    <p>Lütfen çocuğun oyunu tamamlamasını sağlayın.</p>
+                </div>
+            </div>
+        }
     </div>
 
     <!-- Sliding Sidebar -->
@@ -235,6 +253,7 @@
             <div id="userContent" class="accordion-content">
                 <form asp-controller="HesapYonetim" asp-action="CocukKullaniciAdiGuncelle" method="post">
                     <input type="hidden" name="cocukId" value="@ViewBag.CocukId" />
+                    <input type="hidden" name="veliId" value="@ViewBag.VeliId" />
                     <input type="text" name="yeniKullaniciAdi" class="form-control" placeholder="Yeni Kullanıcı Adı" required>
                     <button type="submit" class="save-btn">Kaydet</button>
                 </form>
@@ -248,6 +267,7 @@
             <div id="passContent" class="accordion-content">
                 <form asp-controller="HesapYonetim" asp-action="CocukSifreGuncelle" method="post">
                     <input type="hidden" name="cocukId" value="@ViewBag.CocukId" />
+                    <input type="hidden" name="veliId" value="@ViewBag.VeliId" />
                     <input type="password" name="eskiSifre" class="form-control" placeholder="Mevcut Şifre" required>
                     <input type="password" name="yeniSifre" class="form-control" placeholder="Yeni Şifre" required>
                     <input type="password" name="yeniSifreTekrar" class="form-control" placeholder="Yeni Şifre Tekrar" required>
