@@ -1,0 +1,285 @@
+@{
+    Layout = null;
+    var cocukAd = ViewBag.CocukAd;
+    var raporText = ViewBag.AiRaporu; 
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gelişim Raporu - @cocukAd</title>
+    <link rel="stylesheet" href="~/css/style.css" />
+    <style>
+        body {
+            background-color: #2e003e; /* Dark fallback */
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('/images/arka.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .report-header {
+            background-color: #590075; /* Deep Purple */
+            color: white;
+            height: 60px;
+            padding: 0 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .report-header-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .settings-icon {
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #d1c4e9;
+            transition: color 0.3s;
+        }
+        
+        .settings-icon:hover {
+            color: white;
+            transform: rotate(90deg);
+            transition: transform 0.5s;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            min-height: calc(100vh - 60px);
+            box-sizing: border-box;
+        }
+
+        .report-card {
+            background: rgba(255, 255, 255, 0.85); /* Semi-transparent */
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 40px;
+            width: 100%;
+            max-width: 900px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            margin-top: 20px;
+            height: fit-content;
+        }
+
+        h2.card-title {
+            color: #4a4a4a;
+            border-bottom: 2px solid #8e2de2; /* Purple Accent */
+            padding-bottom: 15px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .report-text {
+            line-height: 1.8;
+            color: #333;
+            font-size: 1.1rem;
+        }
+        
+        .report-text strong {
+            color: #7b1fa2;
+        }
+
+        /* Side Menu Styles */
+        .side-menu {
+            position: fixed;
+            top: 0;
+            right: -350px;
+            width: 300px;
+            height: 100%;
+            background: white;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+            transition: right 0.4s ease;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .side-menu.active {
+            right: 0;
+        }
+
+        .sidebar-header {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+
+        .close-btn {
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: #666;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            color: #444;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .menu-item:hover {
+            color: #8e2de2;
+            padding-left: 5px;
+        }
+
+        .menu-item span {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            background-color: #fcfcfc;
+            transition: max-height 0.3s ease-out;
+            padding: 0 10px;
+        }
+
+        .accordion-content.show {
+            max-height: 400px; /* Adjust as needed */
+            padding: 10px;
+            border-bottom: 3px solid #f0f0f0;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .save-btn {
+            background: #a000c0;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .save-btn:hover {
+            background: #8000a0;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 900;
+            display: none;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="overlay" onclick="closeMenu()"></div>
+
+    <header class="report-header">
+        <div class="report-header-title">Raporlar 📊</div>
+        <div class="settings-icon" onclick="openMenu()">⚙️</div> 
+    </header>
+
+    <div class="container">
+        <div class="report-card">
+            <h2 class="card-title">Genel Performans Özeti</h2>
+            <div class="report-text">
+                @Html.Raw(raporText)
+            </div>
+        </div>
+    </div>
+
+    <!-- Sliding Sidebar -->
+    <div class="side-menu" id="rightSidebar">
+        <div class="sidebar-header">
+            <div class="close-btn" onclick="closeMenu()">✖</div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="menu-item" onclick="toggleAccordion('userContent')">
+                <span>👤</span> Kullanıcı Adı Değiştir
+            </div>
+            <div id="userContent" class="accordion-content">
+                <form asp-controller="HesapYonetim" asp-action="CocukKullaniciAdiGuncelle" method="post">
+                    <input type="hidden" name="cocukId" value="@ViewBag.CocukId" />
+                    <input type="text" name="yeniKullaniciAdi" class="form-control" placeholder="Yeni Kullanıcı Adı" required>
+                    <button type="submit" class="save-btn">Kaydet</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="menu-item" onclick="toggleAccordion('passContent')">
+                <span>🔒</span> Şifre Değiştir
+            </div>
+            <div id="passContent" class="accordion-content">
+                <form asp-controller="HesapYonetim" asp-action="CocukSifreGuncelle" method="post">
+                    <input type="hidden" name="cocukId" value="@ViewBag.CocukId" />
+                    <input type="password" name="eskiSifre" class="form-control" placeholder="Mevcut Şifre" required>
+                    <input type="password" name="yeniSifre" class="form-control" placeholder="Yeni Şifre" required>
+                    <input type="password" name="yeniSifreTekrar" class="form-control" placeholder="Yeni Şifre Tekrar" required>
+                    <button type="submit" class="save-btn">Kaydet</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openMenu() {
+            document.getElementById("rightSidebar").classList.add("active");
+            document.querySelector(".overlay").classList.add("active");
+        }
+
+        function closeMenu() {
+            document.getElementById("rightSidebar").classList.remove("active");
+            document.querySelector(".overlay").classList.remove("active");
+        }
+
+        function toggleAccordion(id) {
+            var content = document.getElementById(id);
+            if (content.classList.contains('show')) {
+                content.classList.remove('show');
+            } else {
+                // Close others
+                document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('show'));
+                content.classList.add('show');
+            }
+        }
+    </script>
+
+</body>
+</html>
+

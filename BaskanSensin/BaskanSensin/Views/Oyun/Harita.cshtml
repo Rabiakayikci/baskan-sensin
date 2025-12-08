@@ -1,0 +1,193 @@
+﻿@{
+    ViewBag.UseLayout = false;
+    var cocukId = ViewBag.CocukId; 
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şehir Macerası Oyunu - Harita</title>
+
+    <link rel="stylesheet" href="~/css/style.css" />
+</head>
+<body class="game-page-body">
+
+    <div id="intro-overlay">
+        <div id="intro-content">
+            <div id="intro-bubble-text">
+                <h2>🌍 Şehir Macerasına Başlangıç!</h2>
+                <p>Haritadaki tek göreviniz <strong>1. Bölüm</strong>'ü tamamlamaktır. Bu bölüm yeşil ve açıktır.</p>
+                <p>Diğer tüm bölümler kilitlidir (🔒) ve maceranın bu aşamasında açılmayacaktır. Başarılar!</p>
+            </div>
+            <button id="continue-button" onclick="hideIntroOverlay()">Devam</button>
+        </div>
+    </div>
+
+    <div id="game-container">
+        <!-- Script to handle URL parameters for level completion -->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const urlParams = new URLSearchParams(window.location.search);
+                const levelCompleted = urlParams.get('levelCompleted');
+                
+                if (levelCompleted === '1') {
+                    localStorage.setItem('completedLevel', 1);
+                    // Remove the query param from URL to prevent re-triggering on refresh
+                    window.history.replaceState({}, document.title, window.location.pathname + "?cocukId=" + '@cocukId');
+                    
+                    // Show success message immediately
+                    const successBubble = document.getElementById('complete-bubble');
+                    if(successBubble) successBubble.classList.remove('hidden');
+                }
+                
+                checkLevelStatus();
+            });
+        </script>
+
+        <div class="tree" style="top: 25%; left: 10%;"><div class="tree-top"></div><div class="tree-trunk"></div></div>
+        <div class="tree" style="top: 60%; left: 60%;"><div class="tree-top"></div><div class="tree-trunk"></div></div>
+        <div class="tree" style="top: 85%; left: 45%;"><div class="tree-top"></div><div class="tree-trunk"></div></div>
+        <div class="pile" id="pile1"></div> <div class="pile" id="pile2"></div> <div class="pile" id="pile3"></div>
+        <div class="pile" id="pile4"></div> <div class="pile" id="pile5"></div>
+
+        <div class="road" id="road1"></div> <div class="road" id="road2"></div> <div class="road" id="road3"></div>
+
+        <div class="stripe stripe-h" id="s1-1"></div> <div class="stripe stripe-h" id="s1-2"></div> <div class="stripe stripe-h" id="s1-3"></div> <div class="stripe stripe-h" id="s1-4"></div>
+        <div class="stripe stripe-h" id="s1-5"></div> <div class="stripe stripe-h" id="s1-6"></div> <div class="stripe stripe-h" id="s1-7"></div> <div class="stripe stripe-h" id="s1-8"></div>
+        <div class="stripe stripe-h" id="s3-1"></div> <div class="stripe stripe-h" id="s3-2"></div> <div class="stripe stripe-h" id="s3-3"></div> <div class="stripe stripe-h" id="s3-4"></div>
+        <div class="stripe stripe-h" id="s3-5"></div> <div class="stripe stripe-h" id="s3-6"></div> <div class="stripe stripe-h" id="s3-7"></div> <div class="stripe stripe-h" id="s3-8"></div>
+        <div class="stripe stripe-v" id="s2-1"></div> <div class="stripe stripe-v" id="s2-2"></div> <div class="stripe stripe-v" id="s2-3"></div> <div class="stripe stripe-v" id="s2-4"></div>
+        <div class="zebra-crossing"></div>
+
+        <div class="level" id="level1" onclick="handleLevelClick(1)">1</div>
+        <div class="level locked" id="level2" onclick="handleLevelClick(2)">2</div>
+        <div class="level locked" id="level3" onclick="handleLevelClick(3)">3</div>
+        <div class="level locked" id="level4" onclick="handleLevelClick(4)">4</div>
+        <div class="level locked" id="level5" onclick="handleLevelClick(5)">5</div>
+
+        <div id="character-area">
+            <div id="complete-bubble" class="chat-bubble hidden">
+                Tebrikler! *1. Bölüm*'ü başarıyla tamamladın! Bu haritadaki tek görev buydu.
+            </div>
+            <div id="all-complete-bubble" class="chat-bubble hidden">
+                Tebrikler! *1. Bölüm*'ü tamamlayarak bu macerayı bitirdin! Harika bir iş çıkardın.
+            </div>
+        </div>
+
+        <button id="exit-button" onclick="location.href='@Url.Action("Index", "Home")'">
+            🚪 Çıkış
+        </button>
+
+        <button id="reset-button" onclick="resetGameProgress()">
+            🔄 Sıfırla
+        </button>
+    </div>
+
+    <script>
+      
+        const LEVEL_1_URL = '@Url.Action("Oyna", "Oyun", new { cocukId = cocukId })';
+
+        const introOverlay = document.getElementById('intro-overlay');
+        const completeBubble = document.getElementById('complete-bubble');
+        const allCompleteBubble = document.getElementById('all-complete-bubble');
+
+        document.addEventListener('DOMContentLoaded', () => {
+            checkLevelStatus();
+        });
+
+        function hideIntroOverlay() {
+            introOverlay.style.opacity = 0;
+            setTimeout(() => { introOverlay.classList.add('hidden'); }, 500);
+        }
+
+        function saveGame(key, value) {
+            localStorage.setItem(key, value);
+        }
+
+        function loadGame(key) {
+            return localStorage.getItem(key);
+        }
+
+        function resetGameProgress() {
+            const confirmed = confirm("Oyun ilerlemesini sıfırlamak istediğinizden emin misiniz? Tamamlanmış bölümler (1. Bölüm) sıfırlanacaktır.");
+            if (confirmed) {
+                localStorage.removeItem('completedLevel');
+                hideAllBubbles();
+                checkLevelStatus();
+                alert("Oyun ilerlemesi sıfırlandı!");
+            }
+        }
+
+        function checkLevelStatus() {
+            const completedLevel = parseInt(loadGame('completedLevel') || 0);
+            for (let i = 1; i <= 5; i++) {
+                const levelElement = document.getElementById(`level${i}`);
+                if (!levelElement) continue;
+
+                levelElement.classList.remove('completed', 'locked');
+                levelElement.textContent = i;
+
+                if (i === 1) {
+                    if (completedLevel >= 1) {
+                        levelElement.classList.add('completed');
+                    } else {
+                        levelElement.classList.remove('completed');
+                        levelElement.style.backgroundColor = '';
+                        levelElement.style.borderColor = '';
+                    }
+                    levelElement.textContent = 1;
+                } else {
+                    levelElement.classList.add('locked');
+                    levelElement.textContent = '';
+                }
+            }
+
+            if (completedLevel >= 1) {
+                showBubble('all-complete');
+            } else {
+                hideAllBubbles();
+            }
+        }
+
+        function showBubble(type) {
+            const bubbles = [completeBubble, allCompleteBubble];
+            bubbles.forEach(b => b.classList.add('hidden'));
+
+            if (type === 'all-complete') {
+                allCompleteBubble.innerHTML = "Tebrikler! 1. Bölümü tamamlayarak bu macerayı bitirdin! Harika bir iş çıkardın.";
+                allCompleteBubble.classList.remove('hidden');
+            }
+        }
+
+        function hideAllBubbles() {
+            completeBubble.classList.add('hidden');
+            allCompleteBubble.classList.add('hidden');
+        }
+
+        function handleLevelClick(level) {
+            if (!introOverlay.classList.contains('hidden')) return;
+            hideAllBubbles();
+
+            // Check if level 1 is completed
+            const completedLevel = parseInt(loadGame('completedLevel') || 0);
+
+            if (level === 1) {
+                if (completedLevel >= 1) {
+                    alert("Bu bölümü zaten tamamladınız! Harika iş çıkardınız.");
+                    return;
+                }
+                
+                window.location.href = LEVEL_1_URL;
+                return;
+            }
+
+            if (level > 1) {
+                alert(`Bölüm ${level} kilitlidir. Lütfen 1. Bölüm'e odaklanın.`);
+                return;
+            }
+        }
+    </script>
+</body>
+</html>

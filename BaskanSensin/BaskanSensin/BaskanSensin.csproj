@@ -15,4 +15,15 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Mapping\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\images\arka.jpg" />
+    <None Include="wwwroot\images\jojo.png" />
+    <None Include="wwwroot\images\logo.png" />
+    <None Include="wwwroot\images\pixelart.jpg" />
+  </ItemGroup>
+
 </Project>

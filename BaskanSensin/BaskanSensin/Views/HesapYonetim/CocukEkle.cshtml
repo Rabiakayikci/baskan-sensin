@@ -1,0 +1,147 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Çocuk Ekle - Başkan Sensin</title>
+    <link rel="stylesheet" href="~/css/style.css" />
+
+    <style>
+        
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('/images/pixelart.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .login-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+            .input-group label {
+                display: block;
+                margin-bottom: 5px;
+                color: #666;
+                font-weight: 600;
+                font-size: 14px;
+            }
+
+            .input-group input {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                box-sizing: border-box;
+            }
+
+        .btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            background: linear-gradient(to right, #4a00e0, #8e2de2);
+        }
+
+            .btn:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 5px 15px rgba(74, 0, 224, 0.4);
+            }
+
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #666;
+            font-size: 14px;
+        }
+
+            .back-link:hover {
+                color: #4a00e0;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="login-wrapper">
+        <div class="card">
+            <h2>Çocuk Hesabı Oluştur</h2>
+
+            @if (TempData["Hata"] != null)
+            {
+                <div style="color: red; margin-bottom: 15px;">@TempData["Hata"]</div>
+            }
+
+            <form asp-controller="HesapYonetim" asp-action="CocukEkle" method="post">
+                <input type="hidden" name="veliId" value="@ViewBag.VeliId" />
+
+                <div class="input-group">
+                    <label>Çocuğun Adı Soyadı</label>
+                    <input type="text" name="AdSoyad" required />
+                </div>
+
+                <div class="input-group">
+                    <label>Doğum Tarihi</label>
+                    <input type="date" name="DogumTarihi" required />
+                </div>
+
+                <div class="input-group">
+                    <label>Kullanıcı Adı</label>
+                    <input type="text" name="KullaniciAdi" required />
+                </div>
+
+                <div class="input-group">
+                    <label>Şifre</label>
+                    <input type="password" name="Sifre" required />
+                </div>
+
+                <button type="submit" class="btn">KAYDET</button>
+            </form>
+
+            <a href="@Url.Action("VeliAnasayfa", "HesapYonetim", new { id = ViewBag.VeliId })" class="back-link">
+                ← İptal ve Geri Dön
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

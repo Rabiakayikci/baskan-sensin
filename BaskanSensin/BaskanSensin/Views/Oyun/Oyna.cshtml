@@ -1,0 +1,182 @@
+﻿@model BaskanSensin.Models.Soru
+
+@{
+    ViewBag.UseLayout = false;
+    var cid = ViewBag.CocukId;
+    int soruNo = ViewBag.SoruNo;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <title>Soru @soruNo - Başkan Sensin</title>
+    <link rel="stylesheet" href="~/css/style.css" />
+
+    <style>
+        
+        body {
+            background-color: #fce4ec; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: none; 
+        }
+
+        .game-container {
+            width: 90%;
+            max-width: 1000px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 40px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #880e4f;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+
+        
+        .cards-wrapper {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .option-btn {
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-align: center;
+            min-width: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+            .option-btn:hover {
+                transform: scale(1.05);
+                border-color: #8e2de2;
+                box-shadow: 0 5px 15px rgba(142, 45, 226, 0.3);
+            }
+
+        
+        .text-only {
+            width: 100%;
+            text-align: left;
+            flex-direction: row;
+        }
+
+        .option-letter {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #880e4f;
+            margin-bottom: 5px;
+            margin-right: 10px;
+        }
+
+        .option-text {
+            font-size: 1rem;
+            color: #555;
+            font-weight: 600;
+        }
+
+        .option-img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-top: 10px;
+            display: none;
+        }
+
+        .has-img .option-img {
+            display: block;
+        }
+
+       
+        .progress-container {
+            width: 100%;
+            background: #eee;
+            height: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #ff9f43, #ff6b6b);
+            width: @(soruNo * 8.3) %;
+            transition: width 0.5s;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="game-container">
+
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+
+        <h2>@soruNo. @Model.Metin</h2>
+
+        <form asp-controller="Oyun" asp-action="PuanEkle" method="post">
+            <input type="hidden" name="cocukId" value="@cid" />
+            <input type="hidden" name="suankiSoruNo" value="@soruNo" />
+
+            <div class="cards-wrapper">
+                @{
+                    char harf = 'A';
+                }
+
+                @foreach (var secenek in Model.Secenekler)
+                {
+                    <button type="submit" name="tur" value="@getHarf(secenek.Yetid ?? 0)"
+                            class="option-btn @(soruNo == 1 ? "has-img" : "text-only")">
+
+                        <span class="option-letter">@harf.</span>
+                        <span class="option-text">@secenek.Metin</span>
+
+                        @if (soruNo == 1)
+                        {
+                            string imgName = "default.png";
+                            if (secenek.Metin.Contains("Mühendis")) imgName = "muhendis.jpeg";
+                            else if (secenek.Metin.Contains("Hastane")) imgName = "hastane.jpeg";
+                            else if (secenek.Metin.Contains("Avukat")) imgName = "adalet.jpeg";
+                            else if (secenek.Metin.Contains("Sanat")) imgName = "sanat.jpeg";
+                            else if (secenek.Metin.Contains("Spor")) imgName = "gym.jpeg";
+
+                            <img src="~/images/@imgName" class="option-img" alt="Resim">
+                        }
+                    </button>
+
+                    harf++;
+                }
+            </div>
+        </form>
+    </div>
+
+    @functions {
+        string getHarf(int yetenekId)
+        {
+            if (yetenekId == 1) return "A"; 
+            if (yetenekId == 2) return "B"; 
+            if (yetenekId == 3) return "C"; 
+            if (yetenekId == 4) return "D"; 
+            if (yetenekId == 5) return "E"; 
+            return "A";
+        }
+    }
+
+</body>
+</html>

@@ -1,3 +1,14 @@
+C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\obj\Debug\net10.0\BaskanSensin.csproj.AssemblyReference.cache
+C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\obj\Debug\net10.0\rpswa.dswa.cache.json
+C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\obj\Debug\net10.0\BaskanSensin.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\obj\Debug\net10.0\BaskanSensin.AssemblyInfoInputs.cache
+C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\obj\Debug\net10.0\BaskanSensin.AssemblyInfo.cs
+C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\obj\Debug\net10.0\BaskanSensin.csproj.CoreCompileInputs.cache
+C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\obj\Debug\net10.0\BaskanSensin.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\obj\Debug\net10.0\BaskanSensin.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\obj\Debug\net10.0\BaskanSensin.RazorAssemblyInfo.cache
+C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\obj\Debug\net10.0\BaskanSensin.RazorAssemblyInfo.cs
+C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\obj\Debug\net10.0\BaskanSensin.sourcelink.json
 C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\bin\Debug\net10.0\appsettings.Development.json
 C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\bin\Debug\net10.0\appsettings.json
 C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\bin\Debug\net10.0\BaskanSensin.staticwebassets.runtime.json
@@ -144,17 +155,6 @@ C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\bin\Debu
 C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\bin\Debug\net10.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\bin\Debug\net10.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\bin\Debug\net10.0\runtimes\win\lib\net9.0\System.Windows.Extensions.dll
-C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\obj\Debug\net10.0\BaskanSensin.csproj.AssemblyReference.cache
-C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\obj\Debug\net10.0\rpswa.dswa.cache.json
-C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\obj\Debug\net10.0\BaskanSensin.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\obj\Debug\net10.0\BaskanSensin.AssemblyInfoInputs.cache
-C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\obj\Debug\net10.0\BaskanSensin.AssemblyInfo.cs
-C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\obj\Debug\net10.0\BaskanSensin.csproj.CoreCompileInputs.cache
-C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\obj\Debug\net10.0\BaskanSensin.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\obj\Debug\net10.0\BaskanSensin.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\obj\Debug\net10.0\BaskanSensin.RazorAssemblyInfo.cache
-C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\obj\Debug\net10.0\BaskanSensin.RazorAssemblyInfo.cs
-C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\obj\Debug\net10.0\BaskanSensin.sourcelink.json
 C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\obj\Debug\net10.0\rjimswa.dswa.cache.json
 C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
 C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
@@ -299,3 +299,4 @@ C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\obj\Debu
 C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\obj\Debug\net10.0\BaskanSensin.pdb
 C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\obj\Debug\net10.0\BaskanSensin.genruntimeconfig.cache
 C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\obj\Debug\net10.0\ref\BaskanSensin.dll
+C:\Users\rabia\Documents\GitHub\baskan-sensin\BaskanSensin\BaskanSensin\obj\Debug\net10.0\compressed\ux048ga9fm-{0}-fjrc8dddto-fjrc8dddto.gz

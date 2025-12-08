@@ -1,0 +1,154 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giriş Yap - Başkan Sensin</title>
+    <link rel="stylesheet" href="~/css/style.css" />
+
+    <style>
+       
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4; 
+            background-size: cover;
+            background-position: center;
+        }
+
+        .login-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+            .input-group label {
+                display: block;
+                margin-bottom: 5px;
+                color: #666;
+                font-size: 14px;
+                font-weight: 600;
+            }
+
+            .input-group input {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                box-sizing: border-box;
+                transition: 0.3s;
+            }
+                
+                .input-group input:focus {
+                    border-color: #8e2de2;
+                    outline: none;
+                    box-shadow: 0 0 5px rgba(142, 45, 226, 0.3);
+                }
+
+        /* --- MOR BUTON TASARIMI --- */
+        .btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+           
+            background: #8e2de2; 
+            background: -webkit-linear-gradient(to right, #4a00e0, #8e2de2); 
+            background: linear-gradient(to right, #4a00e0, #8e2de2); 
+        }
+
+            
+            .btn:hover {
+                transform: translateY(-2px); 
+                box-shadow: 0 5px 15px rgba(74, 0, 224, 0.4); 
+            }
+
+     
+        .footer-links a {
+            text-decoration: none;
+            color: #4a00e0;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+            .footer-links a:hover {
+                color: #8e2de2;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="login-wrapper">
+        <div class="card">
+            <h2>Giriş Yap</h2>
+
+            @if (TempData["Basari"] != null)
+            {
+                <div style="color: #2e7d32; background: #e8f5e9; padding:10px; border-radius:5px; text-align: center; margin-bottom: 10px;">
+                    @TempData["Basari"]
+                </div>
+            }
+            @if (TempData["Hata"] != null)
+            {
+                <div style="color: #c62828; background: #ffebee; padding:10px; border-radius:5px; text-align: center; margin-bottom: 10px;">
+                    @TempData["Hata"]
+                </div>
+            }
+
+            <form asp-controller="HesapYonetim" asp-action="GirisYap" method="post">
+                <div class="input-group">
+                    <label>Kullanıcı Adı</label>
+                    <input type="text" name="KullaniciAdi" required placeholder="Örn: baskan123" />
+                </div>
+                <div class="input-group">
+                    <label>Şifre</label>
+                    <input type="password" name="Sifre" required placeholder="******" />
+                </div>
+
+                <button type="submit" class="btn">GİRİŞ YAP</button>
+            </form>
+
+            <div class="footer-links" style="margin-top: 20px; text-align: center;">
+                <a asp-controller="HesapYonetim" asp-action="Kayit">Hesabın yok mu? Kaydol</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

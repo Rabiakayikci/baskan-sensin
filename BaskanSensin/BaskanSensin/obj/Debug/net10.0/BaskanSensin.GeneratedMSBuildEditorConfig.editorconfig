@@ -34,12 +34,40 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/rabia/Documents/GitHub/baskan-sensin/BaskanSensin/BaskanSensin/Views/HesapYonetim/CocukEkle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVzYXBZb25ldGltXENvY3VrRWtsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rabia/Documents/GitHub/baskan-sensin/BaskanSensin/BaskanSensin/Views/HesapYonetim/Giris.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVzYXBZb25ldGltXEdpcmlzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rabia/Documents/GitHub/baskan-sensin/BaskanSensin/BaskanSensin/Views/HesapYonetim/Kayit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVzYXBZb25ldGltXEtheWl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rabia/Documents/GitHub/baskan-sensin/BaskanSensin/BaskanSensin/Views/HesapYonetim/Rapor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVzYXBZb25ldGltXFJhcG9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rabia/Documents/GitHub/baskan-sensin/BaskanSensin/BaskanSensin/Views/HesapYonetim/VeliAnaSayfa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVzYXBZb25ldGltXFZlbGlBbmFTYXlmYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/rabia/Documents/GitHub/baskan-sensin/BaskanSensin/BaskanSensin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/rabia/Documents/GitHub/baskan-sensin/BaskanSensin/BaskanSensin/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rabia/Documents/GitHub/baskan-sensin/BaskanSensin/BaskanSensin/Views/Oyun/Harita.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3l1blxIYXJpdGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/rabia/Documents/GitHub/baskan-sensin/BaskanSensin/BaskanSensin/Views/Oyun/Oyna.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3l1blxPeW5hLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/rabia/Documents/GitHub/baskan-sensin/BaskanSensin/BaskanSensin/Views/Shared/Error.cshtml]

@@ -1,19 +1,19 @@
-
-/* A. GENEL SIFIRLAMA VE TEMEL STİLLER */
-* {
+﻿* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 body {
     font-family: Arial, sans-serif;
-    background-image: url('pixelart.jpg'); 
-    background-size: cover; 
+    background-image: url('../images/pixelart.jpg');
+    background-size: cover;
     background-position: center;
     background-attachment: fixed;
     min-height: 100vh;
     color: #333;
 }
+
 .btn {
     display: inline-block;
     padding: 8px 15px;
@@ -26,58 +26,69 @@ body {
     text-decoration: none;
     line-height: normal;
 }
+
 .primary {
-    background-color: #9e0a9e; 
+    background-color: #9e0a9e;
     color: white;
 }
+
 .primary:hover {
-    background-color: #7d087d; 
+    background-color: #7d087d;
 }
+
 .secondary {
     background-color: #ccc;
     color: #333;
 }
+
 .secondary:hover {
     background-color: #bbb;
 }
+
 .small-btn {
     padding: 6px 12px;
     font-size: 13px;
 }
-/* B. GİRİŞ VE KAYIT KARTI STİLLERİ (ORTALANMIŞ) */
+
 body.auth-page {
     display: flex;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
 }
+
 .card {
-    background-color: rgba(255, 255, 255, 0.95); 
+    background-color: rgba(255, 255, 255, 0.95);
     padding: 30px 40px;
     border-radius: 12px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); 
-    width: 420px; 
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    width: 420px;
     text-align: center;
     max-width: 90%;
 }
+
 .card h2 {
     color: #333;
     margin-bottom: 25px;
     font-size: 24px;
-    border-bottom: 2px solid #9e0a9e; 
+    border-bottom: 2px solid #9e0a9e;
     padding-bottom: 10px;
 }
+
 .input-group {
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
     text-align: left;
 }
+
 .input-group label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
     color: #555;
 }
-.input-group input, .input-group textarea {
+
+.input-group input,
+.input-group textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ddd;
@@ -85,135 +96,147 @@ body.auth-page {
     font-size: 16px;
     transition: border-color 0.3s;
 }
-.input-group input:focus, .input-group textarea:focus {
-    border-color: #9e0a9e; 
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #9e0a9e;
     outline: none;
     box-shadow: 0 0 0 3px rgba(158, 10, 158, 0.2);
 }
+
 .button-group {
     display: flex;
     justify-content: space-between;
     gap: 10px;
 }
-/* B. GİRİŞ KARTI ALT BAĞLANTI STİLİ */
+
 .card a {
-    color: #9e0a9e; 
+    color: #9e0a9e;
     text-decoration: none;
     font-weight: bold;
-    display: block; 
+    display: block;
     margin-top: 20px;
     font-size: 14px;
     transition: color 0.3s;
 }
 
 .card a:hover {
-    color: #5d005d; 
-    text-decoration: underline; }
-/* C. PANEL YAPISI VE İÇERİK STİLLERİ */
+    color: #5d005d;
+    text-decoration: underline;
+}
+
 .main-header {
-    background-color: #5d005d; 
+    background-color: #5d005d;
     color: white;
     padding: 15px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: fixed; 
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 50;
 }
+
 .logo-area h1 {
-    color: white; 
+    color: white;
     margin: 0;
     font-size: 24px;
 }
+
 .menu-icon {
-    color: white; 
+    color: white;
     cursor: pointer;
     font-size: 28px;
 }
-/* PANEL İÇERİĞİ ARKA PLANI  */
+
 .panel-content {
-    background-image: url('arka.jpg'); 
+    background-image: url('../images/arka.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: scroll; 
-    padding: 20px; 
-    padding-top: 80px; 
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
+    background-attachment: scroll;
+    padding: 20px;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
-    padding-right: 20px; 
+    padding-right: 20px;
 }
 
-/* Panel İçindeki Kart Stili  */
+
 .content-section {
     max-width: 400px;
     width: 100%;
-    margin-bottom: 20px; 
-    background-color: #ffffff; 
+    margin-bottom: 20px;
+    background-color: #ffffff;
     padding: 25px;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
-/* YUVARLAK AVATAR STİLLERİ */
-.student-avatars { 
-    display: flex; 
-    justify-content: center; 
-    margin-top: 15px; 
+
+.student-avatars {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
     gap: 15px;
 }
+
 .avatar-container {
     cursor: pointer;
 }
+
 .avatar {
-    width: 80px; 
+    width: 80px;
     height: 80px;
     line-height: 80px;
     border-radius: 50%;
     font-size: 36px;
     font-weight: bold;
     color: white;
-    background-color: #9e0a9e; 
+    background-color: #9e0a9e;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s;
     display: inline-block;
 }
-.avatar:hover { 
-    transform: scale(1.05); 
-    background-color: #7d087d; 
+
+.avatar:hover {
+    transform: scale(1.05);
+    background-color: #7d087d;
 }
-.student-name { 
-    display: block; 
-    margin-top: 8px; 
-    font-size: 14px; 
-    color: #555; 
+
+.student-name {
+    display: block;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #555;
 }
-/* D. SAĞ YAN MENÜ (SIDE MENU) VE AKORDEON */
+
 .side-menu {
-    position: fixed; 
+    position: fixed;
     top: 0;
-    right: 0; 
+    right: 0;
     width: 300px;
     height: 100%;
-    background-color: #ffffff; 
-    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2); 
+    background-color: #ffffff;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    transform: translateX(100%); 
+    transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
-    z-index: 100; 
-    overflow-y: auto; 
-    padding-top: 80px; 
+    z-index: 100;
+    overflow-y: auto;
+    padding-top: 80px;
 }
+
 .side-menu.active {
-    transform: translateX(0); 
+    transform: translateX(0);
 }
+
 .menu-header {
     display: flex;
     justify-content: space-between;
@@ -221,11 +244,11 @@ body.auth-page {
     border-bottom: 2px solid #ddd;
     padding-bottom: 10px;
     margin-bottom: 15px;
-    position: sticky; 
+    position: sticky;
     top: 0;
     width: 100%;
     padding: 20px;
-    background-color: #ffffff; 
+    background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 101;
 }
@@ -235,87 +258,98 @@ body.auth-page {
     cursor: pointer;
     color: #9e0a9e;
 }
+
 .accordion-container {
     padding-top: 20px;
 }
-.accordion-header { 
-    cursor: pointer; 
-    padding: 12px 0; 
-    font-weight: bold; 
-    color: #444; 
-    border-bottom: 1px solid #ddd; 
-    transition: color 0.2s; 
+
+.accordion-header {
+    cursor: pointer;
+    padding: 12px 0;
+    font-weight: bold;
+    color: #444;
+    border-bottom: 1px solid #ddd;
+    transition: color 0.2s;
 }
-.accordion-header:hover { 
-    color: #9e0a9e; 
+
+.accordion-header:hover {
+    color: #9e0a9e;
 }
-.accordion-content { 
-    max-height: 0; 
-    overflow: hidden; 
-    background-color: #f9f9f9; 
-    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out; 
-    padding: 0 10px; 
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+    padding: 0 10px;
 }
-.accordion-content.open { 
-    max-height: 500px; 
-    padding: 15px 10px 10px 10px; 
+
+.accordion-content.open {
+    max-height: 500px;
+    padding: 15px 10px 10px 10px;
 }
-.accordion-content input, 
-.accordion-content textarea { 
-    width: 100%; 
-    padding: 8px; 
-    margin-bottom: 10px; 
-    border: 1px solid #ccc; 
-    border-radius: 4px; 
-    box-sizing: border-box; 
-    display: block; 
+
+.accordion-content input,
+.accordion-content textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: block;
 }
-/* E. RAPOR SAYFASI STİLLERİ */
+
 body.report-page-body {
-    background-image: url('arka.jpg');
+    background-image: url('../images/arka.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     min-height: 100vh;
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    padding-top: 80px; 
-    padding-left: 0; 
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    padding-left: 0;
 }
+
 .report-content {
     width: 100%;
-    max-width: 1200px; 
+    max-width: 1200px;
     padding: 20px;
-    margin-top: 20px; 
-    flex-grow: 1; 
+    margin-top: 20px;
+    flex-grow: 1;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
 }
+
 .report-card-main {
-    background-color: rgba(209, 183, 207, 0.95); 
+    background-color: rgba(209, 183, 207, 0.95);
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
     width: 100%;
     max-width: 100%;
-    min-height: 80vh; 
-    text-align: left; 
+    min-height: 80vh;
+    text-align: left;
 }
+
 .report-card-main h2 {
     color: #333;
     margin-bottom: 20px;
     font-size: 28px;
-    border-bottom: 2px solid #9e0a9e; 
+    border-bottom: 2px solid #9e0a9e;
     padding-bottom: 10px;
-    text-align: left; 
+    text-align: left;
 }
+
 .report-card-main p {
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 15px;
     color: #555;
 }
+
 .example-chart {
     background-color: #e9e9e9;
     padding: 20px;
@@ -323,6 +357,7 @@ body.report-page-body {
     margin-top: 25px;
     margin-bottom: 25px;
 }
+
 .key-metrics ul {
     list-style: none;
     padding: 0;
@@ -330,6 +365,7 @@ body.report-page-body {
     border-top: 1px solid #eee;
     padding-top: 15px;
 }
+
 .key-metrics li {
     background-color: #f3f3f3;
     margin-bottom: 10px;
@@ -341,6 +377,7 @@ body.report-page-body {
     display: flex;
     align-items: center;
 }
+
 .key-metrics li::before {
     content: '';
     margin-right: 10px;
@@ -348,53 +385,58 @@ body.report-page-body {
     color: #9e0a9e;
     font-size: 1.2em;
 }
+
 :root {
-    --primary-color: #6A1B9A; 
-    --secondary-color: #9C27B0; 
-    --accent-color: #E1BEE7; 
+    --primary-color: #6A1B9A;
+    --secondary-color: #9C27B0;
+    --accent-color: #E1BEE7;
     --text-color-light: #FFFFFF;
-    --shadow-color: rgba(0, 0, 0, 0.7); 
+    --shadow-color: rgba(0, 0, 0, 0.7);
     --nav-height: 70px;
 }
 
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif; 
+    font-family: 'Montserrat', sans-serif;
     min-height: 100vh;
-    overflow: hidden; 
+    overflow: hidden;
     color: var(--text-color-light);
 }
-/* 1. NAVİGASYON ÇUBUĞU STİLLERİ */
+
 .navbar {
-    position: fixed; 
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: var(--nav-height);
-    background-color: rgba(45, 0, 80, 0.95); 
+    background-color: rgba(45, 0, 80, 0.95);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 40px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    z-index: 10; 
+    z-index: 10;
 }
+
 .logo-text {
     font-size: 1.4em;
     font-weight: 700;
     color: var(--accent-color);
     letter-spacing: 2px;
 }
+
 .nav-links {
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
 }
+
 .nav-links li {
     margin-left: 30px;
 }
+
 .nav-links a {
     text-decoration: none;
     color: var(--text-color-light);
@@ -402,64 +444,71 @@ body {
     font-size: 1em;
     padding: 5px 0;
     transition: color 0.3s, border-bottom 0.3s;
-    border-bottom: 2px solid transparent; 
+    border-bottom: 2px solid transparent;
 }
+
 .nav-links a:hover {
     color: var(--accent-color);
     border-bottom: 2px solid var(--accent-color);
 }
+
 .background-image {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; 
-    background-image: url('.jpg');
-    background-size: cover; 
+    z-index: -1;
+    background-image: url('../images/.jpg');
+    background-size: cover;
     background-position: center;
-    filter: brightness(55%); 
+    filter: brightness(55%);
 }
+
 .main-content-area {
     position: absolute;
-    top: var(--nav-height); 
+    top: var(--nav-height);
     left: 0;
     right: 0;
     bottom: 0;
     display: flex;
-    align-items: center; 
-    justify-content: space-between; 
+    align-items: center;
+    justify-content: space-between;
     padding: 0 80px;
-    max-width: 1200px; 
-    margin: 0 auto; 
+    max-width: 1200px;
+    margin: 0 auto;
 }
+
 .hero-section {
-    text-align: left; 
+    text-align: left;
     max-width: 500px;
-    align-self: flex-start; 
-    margin-top: 50px; 
+    align-self: flex-start;
+    margin-top: 50px;
 }
+
 .game-title {
-    font-size: 4em; 
+    font-size: 4em;
     margin-bottom: 0.1em;
     color: var(--accent-color);
-    text-shadow: 4px 4px 10px var(--shadow-color); 
+    text-shadow: 4px 4px 10px var(--shadow-color);
     letter-spacing: 5px;
     font-weight: 900;
 }
+
 .slogan {
-    font-size: 1.4em; 
+    font-size: 1.4em;
     font-style: italic;
     color: var(--text-color-light);
     opacity: 0.95;
     margin-top: 0;
     padding-bottom: 15px;
     border-bottom: 3px solid var(--secondary-color);
-    width: 100%; 
+    width: 100%;
     max-width: 450px;
     margin-left: 0;
     text-shadow: 1px 1px 3px var(--shadow-color);
 }
+
 .start-button {
     background-color: var(--secondary-color);
     color: var(--text-color-light);
@@ -472,44 +521,47 @@ body {
     box-shadow: 0 6px 18px var(--primary-color);
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-top: 20px; 
+    margin-top: 20px;
     transition: transform 0.3s;
 }
+
 .start-button:hover {
     background-color: var(--primary-color);
-    transform: translateY(-3px); 
+    transform: translateY(-3px);
     box-shadow: 0 10px 25px var(--primary-color);
 }
+
 :root {
-    --primary-color: #6A1B9A; 
-    --secondary-color: #9C27B0; 
-    --accent-color: #E1BEE7; 
+    --primary-color: #6A1B9A;
+    --secondary-color: #9C27B0;
+    --accent-color: #E1BEE7;
     --text-color-light: #FFFFFF;
-    --shadow-color: rgba(0, 0, 0, 0.7); 
+    --shadow-color: rgba(0, 0, 0, 0.7);
     --nav-height: 70px;
 }
+
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Montserrat', sans-serif; 
+    font-family: 'Montserrat', sans-serif;
     min-height: 100vh;
-    overflow: hidden; 
+    overflow: hidden;
     color: var(--text-color-light);
 }
-/* 1. NAVİGASYON ÇUBUĞU STİLLERİ */
+
 .navbar {
-    position: fixed; 
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: var(--nav-height);
-    background-color: rgba(45, 0, 80, 0.95); 
+    background-color: rgba(45, 0, 80, 0.95);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 40px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    z-index: 10; 
+    z-index: 10;
 }
 
 .logo-text {
@@ -518,10 +570,11 @@ body {
     color: var(--accent-color);
     letter-spacing: 2px;
 }
+
 .logo-container {
-    display: flex; 
-    align-items: center; 
-    gap: 10px; 
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .nav-links {
@@ -542,69 +595,70 @@ body {
     font-size: 1em;
     padding: 5px 0;
     transition: color 0.3s, border-bottom 0.3s;
-    border-bottom: 2px solid transparent; 
+    border-bottom: 2px solid transparent;
 }
 
 .nav-links a:hover {
     color: var(--accent-color);
     border-bottom: 2px solid var(--accent-color);
 }
-/* 2. ARKA PLAN VE ANA İÇERİK  */
+
 .background-image {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; 
-    background-image: url('jojo.png'); 
-    background-size: cover; 
+    z-index: -1;
+    background-image: url('../images/jojo.png');
+    background-size: cover;
     background-position: center;
-    filter: brightness(55%); 
+    filter: brightness(55%);
 }
-/* 2. ARKA PLAN VE ANA İÇERİK  */
+
 .main-content-area {
-    
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     left: 0;
-    right: auto; 
-    padding-left: 80px; 
-    max-width: 600px; 
+    right: auto;
+    padding-left: 80px;
+    max-width: 600px;
     width: 90%;
 }
+
 .hero-section {
-    text-align: left !important; 
+    text-align: left !important;
     width: 100%;
 }
 
 .game-title {
-    text-align: left; 
+    text-align: left;
 }
 
 .slogan {
     text-align: left;
-    margin-left: 0; 
+    margin-left: 0;
 }
+
 .game-title {
-    font-size: 5.5em; 
+    font-size: 5.5em;
     margin-bottom: 0.05em;
     color: var(--accent-color);
-    text-shadow: 5px 5px 12px var(--shadow-color); 
+    text-shadow: 5px 5px 12px var(--shadow-color);
     letter-spacing: 5px;
     font-weight: 900;
 }
 
 .slogan {
-    font-size: 1.8em; 
+    font-size: 1.8em;
     font-style: italic;
     color: var(--text-color-light);
     opacity: 0.98;
     margin-top: 0;
     padding-bottom: 20px;
     border-bottom: 4px solid var(--secondary-color);
-    width: 100%; 
+    width: 100%;
     max-width: 550px;
     margin-left: 0;
     text-shadow: 1px 1px 3px var(--shadow-color);
@@ -622,23 +676,24 @@ body {
     box-shadow: 0 8px 20px var(--primary-color);
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-top: 30px; 
+    margin-top: 30px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
+
 .start-button:hover {
     background-color: var(--primary-color);
-    transform: scale(1.05); 
+    transform: scale(1.05);
     box-shadow: 0 12px 30px var(--primary-color);
 }
 
-/* MOBİL UYUMLULUK */
+
 @media (max-width: 768px) {
     .navbar {
         padding: 0 20px;
     }
-    
+
     .nav-links {
-        display: none; 
+        display: none;
     }
 
     .main-content-area {
@@ -647,13 +702,13 @@ body {
         left: 0;
         right: 0;
         transform: translateY(-50%);
-        text-align: center; 
+        text-align: center;
     }
-    
+
     .hero-section {
         text-align: center;
     }
-    
+
     .game-title {
         font-size: 3.5em;
         letter-spacing: 3px;
@@ -669,4 +724,434 @@ body {
         font-size: 1.4em;
         padding: 15px 40px;
     }
+}
+
+/* --- GAME MAP STYLES (GLOBAL) --- */
+
+body.game-page-body {
+    /* Specific body class logic if needed, otherwise rely on Harita View layout=false */
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffe0b2;
+    background-image: none !important;
+    /* Ensure no image interferes */
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    color: #333;
+    overflow: hidden;
+    /* Prevent scrolling on map */
+}
+
+
+#game-container {
+    position: relative;
+    flex-grow: 1;
+    width: 100%;
+    height: 100vh;
+    /* Full screen height */
+    background-color: #6D4C41;
+    /* Dirt/Ground color */
+    overflow: hidden;
+}
+
+
+.tree {
+    position: absolute;
+    width: 100px;
+    /* Fixed size for better control */
+    height: 120px;
+    z-index: 5;
+}
+
+.tree-trunk {
+    width: 20px;
+    height: 40px;
+    background-color: #8B4513;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    border-radius: 5px 5px 0 0;
+    border: 2px solid #5D4037;
+    box-sizing: border-box;
+}
+
+.tree-top {
+    width: 80px;
+    height: 80px;
+    background-color: #388E3C;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    border: 3px solid #1B5E20;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    z-index: 6;
+}
+
+.pile {
+    position: absolute;
+    background-color: #5D4037;
+    /* Darker dirt patch */
+    border-radius: 50%;
+    opacity: 0.6;
+    z-index: 1;
+}
+
+
+
+#pile1 {
+    top: 10%;
+    left: 20%;
+    width: 200px;
+    height: 100px;
+    transform: rotate(5deg);
+}
+
+#pile2 {
+    top: 60%;
+    left: 15%;
+    width: 150px;
+    height: 80px;
+    transform: rotate(-10deg);
+}
+
+#pile3 {
+    top: 85%;
+    left: 35%;
+    width: 180px;
+    height: 90px;
+}
+
+#pile4 {
+    top: 5%;
+    left: 80%;
+    width: 160px;
+    height: 80px;
+    transform: rotate(15deg);
+}
+
+#pile5 {
+    top: 70%;
+    left: 75%;
+    width: 140px;
+    height: 100px;
+    transform: rotate(-20deg);
+}
+
+
+.road {
+    position: absolute;
+    background-color: #333;
+    box-shadow: 0 0 0 5px #555;
+    /* Road border */
+    z-index: 20;
+}
+
+/* Top Road */
+#road1 {
+    top: 15%;
+    left: 0;
+    width: 100%;
+    height: 100px;
+}
+
+/* Middle Vertical Connector */
+#road2 {
+    top: 15%;
+    left: 45%;
+    width: 100px;
+    height: 70%;
+    /* Connects top to bottom */
+}
+
+/* Bottom Road */
+#road3 {
+    top: 75%;
+    left: 0;
+    width: 100%;
+    height: 100px;
+}
+
+
+/* Road Stripes */
+.stripe {
+    position: absolute;
+    background-color: #ccc;
+    z-index: 21;
+}
+
+.stripe-h {
+    height: 10px;
+    width: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.stripe-v {
+    width: 10px;
+    height: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Positioning Stripes - Top Road */
+#s1-1 {
+    top: 45%;
+    left: 5%;
+}
+
+#s1-2 {
+    top: 45%;
+    left: 15%;
+}
+
+#s1-3 {
+    top: 45%;
+    left: 25%;
+}
+
+#s1-4 {
+    top: 45%;
+    left: 35%;
+}
+
+#s1-5 {
+    top: 45%;
+    left: 60%;
+}
+
+/* Skip intersection */
+#s1-6 {
+    top: 45%;
+    left: 70%;
+}
+
+#s1-7 {
+    top: 45%;
+    left: 80%;
+}
+
+#s1-8 {
+    top: 45%;
+    left: 90%;
+}
+
+/* Positioning Stripes - Bottom Road */
+#s3-1 {
+    top: 45%;
+    left: 5%;
+}
+
+#s3-2 {
+    top: 45%;
+    left: 15%;
+}
+
+#s3-3 {
+    top: 45%;
+    left: 25%;
+}
+
+#s3-4 {
+    top: 45%;
+    left: 35%;
+}
+
+#s3-5 {
+    top: 45%;
+    left: 60%;
+}
+
+#s3-6 {
+    top: 45%;
+    left: 70%;
+}
+
+#s3-7 {
+    top: 45%;
+    left: 80%;
+}
+
+#s3-8 {
+    top: 45%;
+    left: 90%;
+}
+
+/* Positioning Stripes - Vertical Road */
+#s2-1 {
+    top: 20%;
+    left: 50%;
+}
+
+#s2-2 {
+    top: 40%;
+    left: 50%;
+}
+
+#s2-3 {
+    top: 60%;
+    left: 50%;
+}
+
+#s2-4 {
+    top: 80%;
+    left: 50%;
+}
+
+/* Levels (Yellow Circles) */
+.level {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: #FFC107;
+    /* Amber 500 */
+    border: 5px solid #FF6F00;
+    /* Amber 900 */
+    border-radius: 50%;
+    z-index: 30;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s;
+}
+
+.level:hover {
+    transform: scale(1.1);
+}
+
+.level.locked {
+    background-color: #795548;
+    /* Brown */
+    border-color: #3E2723;
+    opacity: 0.8;
+    cursor: not-allowed;
+}
+
+.level.completed {
+    background-color: #4CAF50;
+    /* Green */
+    border-color: #1B5E20;
+}
+
+/* Level Positions based on Image */
+/* Level 1: Top Left */
+#level1 {
+    top: 16%;
+    left: 2%;
+}
+
+/* Level 2: Top Right */
+#level2 {
+    top: 16%;
+    left: 90%;
+}
+
+/* Level 3: Center (on Vertical Road) */
+#level3 {
+    top: 45%;
+    left: 46%;
+    /* Centered on middle road */
+}
+
+/* Level 4: Bottom Right */
+#level4 {
+    top: 76%;
+    left: 90%;
+}
+
+/* Level 5: Bottom Left */
+#level5 {
+    top: 76%;
+    left: 2%;
+}
+
+/* Intra-overlay styling */
+#intro-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: opacity 0.5s;
+}
+
+#intro-content {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 500px;
+}
+
+#intro-bubble-text h2 {
+    color: #d32f2f;
+}
+
+#continue-button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Chat Bubbles */
+.chat-bubble {
+    position: absolute;
+    background: white;
+    border: 2px solid #333;
+    padding: 15px;
+    border-radius: 15px;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 50;
+    max-width: 80%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    font-size: 1.2rem;
+}
+
+/* Exit Button */
+#exit-button,
+#reset-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    z-index: 100;
+}
+
+#reset-button {
+    right: 120px;
+    background: #2196F3;
 }
